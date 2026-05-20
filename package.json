@@ -4,15 +4,24 @@
   "description": "Compile Codex MCP config into a typed Codex skill package.",
   "type": "module",
   "bin": {
-    "mcp2skill": "./src/cli.ts"
+    "mcp2skill": "./dist/index.js"
   },
   "scripts": {
+    "build": "tsup",
     "compile": "node ./src/cli.ts compile",
+    "dev": "tsup --watch",
+    "lint": "eslint",
+    "lint:fix": "pnpm lint --fix",
+    "start": "node dist/index.js",
     "test": "node --test tests/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc"
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@types/node": "^25.0.0",
+    "eslint": "^9.0.0",
+    "tsup": "^8.0.0",
+    "typescript-eslint": "^8.0.0",
     "typescript": "^5.9.0"
   },
   "engines": {

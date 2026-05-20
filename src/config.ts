@@ -4,8 +4,7 @@ import { resolve } from "node:path";
 import type { CodexMcpConfig, CodexMcpServerConfig } from "./types.ts";
 
 type TomlPrimitive = string | number | boolean;
-type TomlValue = TomlPrimitive | TomlArray | TomlTable;
-interface TomlArray extends Array<TomlValue> {}
+type TomlValue = TomlPrimitive | TomlValue[] | TomlTable;
 interface TomlTable {
   [key: string]: TomlValue;
 }
