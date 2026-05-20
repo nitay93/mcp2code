@@ -1,0 +1,21 @@
+{
+  "name": "mcp2skill",
+  "version": "0.1.0",
+  "description": "Compile Codex MCP config into a typed Codex skill package.",
+  "type": "module",
+  "bin": {
+    "mcp2skill": "./src/cli.ts"
+  },
+  "scripts": {
+    "compile": "node ./src/cli.ts compile",
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}
