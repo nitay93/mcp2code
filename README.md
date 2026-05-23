@@ -31,8 +31,8 @@ flowchart LR
   compile --> introspect["Introspect MCP servers"]
   introspect --> generate["Generate skill package"]
   generate --> skill[".agents/skills/mcp-tools/"]
-  skill --> call["import { toolFn } from functions.ts"]
-  call --> mcp["MCP server"]
+  skill --> invoke["import { toolFn } from functions.ts"]
+  invoke --> mcp["MCP server"]
 ```
 
 ## Requirements
