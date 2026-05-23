@@ -59,7 +59,7 @@ class StdioMcpClient implements McpClient {
     await this.request("initialize", {
       protocolVersion: "2024-11-05",
       capabilities: {},
-      clientInfo: { name: "mcp2skill", version: "0.1.0" }
+      clientInfo: { name: "mcp2code", version: "0.1.0" }
     });
     this.notify("notifications/initialized", {});
   }
@@ -132,7 +132,7 @@ class HttpMcpClient implements McpClient {
     await this.request("initialize", {
       protocolVersion: "2024-11-05",
       capabilities: {},
-      clientInfo: { name: "mcp2skill", version: "0.1.0" }
+      clientInfo: { name: "mcp2code", version: "0.1.0" }
     });
     await this.request("notifications/initialized", {});
   }

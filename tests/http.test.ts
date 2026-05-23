@@ -38,15 +38,15 @@ test("compiles and calls an HTTP MCP with bearer and static headers", async () =
   };
 
   try {
-    const dir = mkdtempSync(join(tmpdir(), "mcp2skill-http-"));
+    const dir = mkdtempSync(join(tmpdir(), "mcp2code-http-"));
     const configPath = join(dir, "config.toml");
-    process.env.MCP2SKILL_TEST_TOKEN = "secret-token";
+    process.env.MCP2CODE_TEST_TOKEN = "secret-token";
     writeFileSync(
       configPath,
       `
 [mcp_servers.http_fixture]
 url = "https://example.invalid/mcp"
-bearer_token_env_var = "MCP2SKILL_TEST_TOKEN"
+bearer_token_env_var = "MCP2CODE_TEST_TOKEN"
 http_headers = { "X-Test-Region" = "local" }
 `,
       "utf8"

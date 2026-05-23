@@ -8,7 +8,7 @@ import { pathToFileURL } from "node:url";
 import { compileMcpToSkill } from "../src/compiler.ts";
 
 test("compiles a stdio MCP into a skill and calls a generated function", async () => {
-  const dir = mkdtempSync(join(tmpdir(), "mcp2skill-"));
+  const dir = mkdtempSync(join(tmpdir(), "mcp2code-"));
   const configPath = join(dir, "config.toml");
   const fixture = resolve("tests/fixtures/stdio-mcp.cjs");
   writeFileSync(

@@ -51,7 +51,7 @@ function requiredValue(argv: string[], index: number, flag: string): string {
 
 function printHelp(): void {
   console.log(`Usage:
-  mcp2skill compile [--config <path>] [--out .agents/skills] [--skill-name mcp-tools]
+  mcp2code compile [--config <path>] [--out .agents/skills] [--skill-name mcp-tools]
 
 Reads Codex MCP config.toml, introspects enabled MCP servers, and emits a local Codex skill package.
 `);
